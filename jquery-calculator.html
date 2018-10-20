@@ -88,6 +88,7 @@ var isFirstNum = true;
 //operater
 var op;
 var isOp = true;
+isAdd = false;
 
 //second number
 
@@ -116,9 +117,13 @@ function pickFirstNum(){
 //pick operator
 function pickOperator(){
 $('.operator').on('click', function(){
-    op = $(this).attr('value');
-    $('#result').html(op)
-    console.log(op);
+
+    isFirstNum = false;
+    op = $(this).attr('value'); 
+      if(op === 'plus')
+     {
+       isAdd = true;
+      }
   });
 };
 
