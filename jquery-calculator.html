@@ -74,10 +74,72 @@
 <script type="text/javascript">
 
 $(document).ready(function() {
+ 
+// var num1 =  " ";
+// var num2 = " ";
+// var operator = "  ";
+// var total = " ";
 
-// Your code here...
-// jkdaldf
-//jdkfjdsk
+// First number
+var firstNum = 0;
+var firstNumResult = "";
+var isFirstNum = true;
+
+//operater
+var op;
+var isOp = true;
+
+//second number
+
+var secondNum = 0;
+var secondNumResult = 0;
+var isSecondNum = true; 
+
+//total
+var total = 0;
+var isTotal = true;
+
+
+//functions----------
+
+function pickFirstNum(){
+  $('.number').on('click', function(){
+    firstNum = $(this).attr('value');
+    firstNumResult += firstNum;
+    console.log(firstNum);
+    console.log(firstNumResult);
+  });
+};
+
+//pick operator
+function pickOperator(){
+  $('.operator').on('click', function(){
+    
+  })
+}
+
+
+
+
+
+pickFirstNum();
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  $(".button-1", ".button-2", ".button-3").on('click', function(){
+//    alert('it works');
+//  });
+
 });
 
 </script>
