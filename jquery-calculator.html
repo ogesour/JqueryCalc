@@ -103,42 +103,54 @@ var isTotal = true;
 //functions----------
 
 function pickFirstNum(){
+  
   $('.number').on('click', function(){
+    if(isFirstNum){
     firstNum = $(this).attr('value');
-    firstNumResult += firstNum;
-    console.log(firstNum);
-    console.log(firstNumResult);
+    firstNumResult += firstNum; 
+    $('#first-number').html(firstNumResult);
+  }
   });
 };
 
 //pick operator
 function pickOperator(){
-  $('.operator').on('click', function(){
-    
-  })
-}
+$('.operator').on('click', function(){
+    op = $(this).attr('value');
+    $('#result').html(op)
+    console.log(op);
+  });
+};
+
+
+
+function pickSecondNum(){
+  
+  $('.number').on('click', function(){
+    if(isSecondNum){
+    secondNum = $(this).attr('value');
+    secondNumResult += secondNum; 
+    $('#second-number').html(secondNumResult);
+  }
+  });
+};
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 pickFirstNum();
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  $(".button-1", ".button-2", ".button-3").on('click', function(){
-//    alert('it works');
-//  });
+pickOperator();
+pickSecondNum();
 
 });
 
